@@ -1,4 +1,3 @@
-```css
 /* ============================================================
    MUHAMMAD KAMRAN
    HEALTHCARE QUALITY • CLINICAL PHARMACY • RESEARCH • HEALTHCARE MANAGEMENT • ACCREDITATION • COMPLAINCE
@@ -1926,4 +1925,220 @@ footer {
         transition-duration: 0.01ms !important;
     }
 }
-```
+
+/* ============================================================
+   ENHANCED EXPERIENCE / PORTFOLIO DESIGN
+   ============================================================ */
+
+.experience-list {
+    position: relative;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.experience-list::before {
+    content: "";
+    position: absolute;
+    left: 23px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: linear-gradient(
+        to bottom,
+        rgba(22, 199, 189, 0.55),
+        rgba(22, 135, 217, 0.22),
+        rgba(22, 199, 189, 0.02)
+    );
+}
+
+.experience-entry {
+    position: relative;
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 28px;
+    margin-bottom: 55px;
+}
+
+.experience-entry:last-child {
+    margin-bottom: 0;
+}
+
+.experience-marker {
+    position: relative;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(3, 17, 27, 0.96);
+    border: 1px solid rgba(25, 203, 195, 0.42);
+    box-shadow: 0 0 0 7px rgba(22, 199, 189, 0.045),
+                0 0 30px rgba(22, 199, 189, 0.08);
+}
+
+.experience-marker span {
+    color: var(--teal);
+    font-family: "Manrope", sans-serif;
+    font-size: 0.67rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.experience-content {
+    padding: 35px 38px;
+    background:
+        linear-gradient(145deg,
+            rgba(6, 30, 43, 0.82),
+            rgba(3, 15, 24, 0.78));
+    border: 1px solid rgba(36, 183, 190, 0.13);
+    border-radius: 22px;
+    box-shadow: 0 22px 65px rgba(0, 0, 0, 0.18);
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.experience-content:hover {
+    transform: translateY(-5px);
+    border-color: rgba(36, 211, 203, 0.34);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+}
+
+.experience-content h3 {
+    color: var(--heading);
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.experience-content h4 {
+    color: #71919a;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.role-block {
+    position: relative;
+    padding: 22px 0 22px 20px;
+    border-left: 1px solid rgba(22, 199, 189, 0.17);
+}
+
+.role-block + .role-block {
+    margin-top: 5px;
+    border-top: 1px solid rgba(36, 183, 190, 0.08);
+    padding-top: 27px;
+}
+
+.role-block h5 {
+    color: #b8d6d9;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.98rem;
+    margin-bottom: 4px;
+}
+
+.role-label {
+    color: var(--teal);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+.experience-bullets {
+    list-style: none;
+    display: grid;
+    gap: 9px;
+}
+
+.experience-bullets li {
+    position: relative;
+    padding-left: 19px;
+    color: #6f8c95;
+    font-size: 0.76rem;
+    line-height: 1.75;
+}
+
+.experience-bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--teal);
+    font-size: 1rem;
+}
+
+.publication-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 22px 0 25px;
+}
+
+.publication-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 11px;
+    border-radius: 50px;
+    color: #78989f;
+    background: rgba(4, 25, 36, 0.72);
+    border: 1px solid rgba(36, 183, 190, 0.10);
+    font-size: 0.62rem;
+}
+
+.publication-meta i {
+    color: var(--teal);
+}
+
+.publication-note {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #587780;
+    font-size: 0.68rem;
+    margin: 0 0 20px;
+}
+
+.publication-note i {
+    color: var(--teal);
+}
+
+@media (max-width: 650px) {
+    .experience-list::before {
+        left: 18px;
+    }
+
+    .experience-entry {
+        grid-template-columns: 38px minmax(0, 1fr);
+        gap: 15px;
+        margin-bottom: 35px;
+    }
+
+    .experience-marker {
+        width: 38px;
+        height: 38px;
+    }
+
+    .experience-content {
+        padding: 24px 19px;
+        border-radius: 17px;
+    }
+
+    .experience-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .role-block {
+        padding-left: 14px;
+    }
+
+    .experience-bullets li {
+        font-size: 0.72rem;
+    }
+
+    .publication-meta {
+        gap: 6px;
+    }
+}
